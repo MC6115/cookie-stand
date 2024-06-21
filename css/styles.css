@@ -1,0 +1,18 @@
+header{
+    background-color: black;
+    color: salmon;
+}
+h1{
+    padding: 10px;
+}
+nav{
+    background-color: salmon;
+    padding: 10px;
+}
+footer{
+    background-color: grey;
+}
+p{
+    color: gray;
+    padding-left: 5px;
+}
