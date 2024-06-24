@@ -46,3 +46,8 @@ footer p{
 main{
     padding-bottom: 30px;
 }
+ul{
+    padding-left: 50px;
+    color: grey;
+    list-style: none;
+}
