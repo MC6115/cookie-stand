@@ -51,6 +51,18 @@ ul{
     color: grey;
     list-style: none;
 }
-/* .sales-table{
-    
-} */
+table{ 
+    margin: 80px;
+    border: solid 1px;
+}
+table td{
+    padding: 2px;
+}
+table tr{
+    padding: 2px;
+}
+table th{
+    padding: 2px;
+}
+
+
