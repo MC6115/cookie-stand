@@ -1,17 +1,18 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 header{
     background-color: black;
-    color: salmon;
-    
+    color: salmon; 
 }
 h1{
     padding: 10px;
     display: flex;
     justify-content: space-around;
     padding: 30px;
+    font-style: italic;
 }
 nav{
     background-color: salmon;
@@ -51,18 +52,40 @@ ul{
     color: grey;
     list-style: none;
 }
-table{ 
-    margin: 80px;
-    border: solid 1px;
+#sales-table{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
 }
-table td{
-    padding: 2px;
+table {
+    border-collapse: collapse;
+    width: 70%;
 }
-table tr{
-    padding: 2px;
+td, th{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
 }
-table th{
-    padding: 2px;
+thead{
+    background-color: gray;
+    color: white;
 }
-
-
+tbody{
+    background-color: salmon;
+}
+th{
+    border: none;
+}
+tbody :last-child{
+    background-color: gray;
+    border: none;
+    color: white;
+}
+tbody> tr > td:first-child{
+    text-align: left;
+}
+tbody> tr:last-child> td{
+    text-align: center;
+    border: none;
+    color: white;
+}
