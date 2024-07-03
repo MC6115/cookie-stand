@@ -15,6 +15,7 @@ h1{
     font-style: italic;
 }
 nav{
+    font-size: 16px;
     background-color: salmon;
     padding: 10px;
 }
@@ -55,7 +56,12 @@ section{
     display: flex;
     justify-content: space-around;
 }
+#storeFormSection{
+    display: flex;
+    justify-content: space-around;
+}
 table {
+    font-size: 14px;
     border-collapse: collapse;
     width: 70%;
 }
@@ -75,6 +81,7 @@ th{
     border: none;
 }
 tbody :last-child{
+    font-weight: bold;
     background-color: gray;
     border: none;
     color: white;
@@ -93,13 +100,14 @@ fieldset{
     justify-content: space-around;
 }
 label{
-    font-size:small;
+    font-size: 14px;
     font-weight: bold;
 }
 input{
-    max-width: 10%;
+    max-width: 8%;
 }
 button{
+    font-size: 14px;
     font-weight: bold;
     border-radius: 5px;
     border: solid thin;
