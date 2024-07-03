@@ -17,7 +17,7 @@ const seattle = new Location(`Seattle`, `2901 3rd avenue #300, Seattle`,'123-456
 const tokyo = new Location(`Tokyo`,`1 Chome 1-2 Oshiage, Sumida City, Tokyo 121-8634`,`222-222-2222`,`6a.m.-7p.m.`,[],3,24,4.6);
 const dubai = new Location(`Dubai`,`1 Sheikh Mohammed bin Rashid Blvd - Dubai`,`333-333-3333`,`6a.m.-7p.m.`,[],11,38,3.7);
 const paris = new Location(`Paris`,`Champ de Mars, 5 Avenue Antole France,75007 Paris`,'444-444-4444',`6a.m.-7p.m.`,[],20,38,2.3);
-const lima = new Location(`Lima,`,`Ca.Gral. Borgoño cuadra 8, Miraflores 15074`,`555-555-5555`,`6a.m.-7p.m.`,[],20,38,2.3);
+const lima = new Location(`Lima`,`Ca.Gral. Borgoño cuadra 8, Miraflores 15074`,`555-555-5555`,`6a.m.-7p.m.`,[],20,38,2.3);
 
 const hours =[`6am`,`7am`,`8am`,`9am`,`10am`,`11am`,`12pm`,`1pm`,`2pm`,`3pm`,`4pm`,`5pm`,`6pm`,`7pm`];
 const stores =[seattle,tokyo,dubai,paris,lima];
