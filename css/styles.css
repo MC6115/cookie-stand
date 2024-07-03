@@ -1,17 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
 header{
     background-color: black;
     color: salmon; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer{
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 h1{
-    padding: 10px;
+    font-size: xx-large;
+    font-weight:900;
     display: flex;
     justify-content: space-around;
-    padding: 30px;
+    padding: 40px;
     font-style: italic;
 }
 nav{
@@ -22,8 +27,13 @@ nav{
 nav a{
     padding: 5px;
 }
+main{
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 footer{
     background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 main p{
     color: gray;
@@ -43,6 +53,7 @@ footer p{
 }
 main{
     padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 ul{
     padding-left: 50px;
@@ -71,6 +82,7 @@ td, th{
     text-align: center;
 }
 thead{
+    font-weight: bold;
     background-color: gray;
     color: white;
 }
@@ -95,6 +107,7 @@ tbody> tr:last-child> td{
     color: white;
 }
 fieldset{
+    border: solid 1px;
     padding: 10px;
     display: flex;
     justify-content: space-around;
