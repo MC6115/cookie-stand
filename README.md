@@ -2,6 +2,10 @@
 
 ## Lighthouse
 
-- Fisrt major commit:
+- First major commit:
 
-![Lighthouse-1](../cookie-stand/img/Screenshot%202024-06-25%20215120.png)
+![Lighthouse-1](../cookie-stand/img/LightHouse.png)
+
+- Finished Sales page:
+
+![Lighthouse-2](../cookie-stand/img/LightHouse2.png)

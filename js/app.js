@@ -1,13 +1,13 @@
 'use strict';
 
-function Location(name, address, contactInfo, workingHours, cookiesPerHour, minCustomerPerHour, maxCustomerPerHour, avgCookiesPerSale){
+function Location(name, address, contactInfo, workingHours, cookiesPerHour, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale){
     this.name = name;
     this.address = address;
     this.contactInfo = contactInfo;
     this.workingHours = workingHours;
     this.cookiesPerHour = cookiesPerHour;
-    this.minCustomerPerHour = minCustomerPerHour;
-    this.maxCustomerPerHour = maxCustomerPerHour;
+    this.minCustomerPerHour = minCustomersPerHour;
+    this.maxCustomerPerHour = maxCustomersPerHour;
     this.avgCookiesPerSale = avgCookiesPerSale;
 };
 Location.prototype.estimate = function(){
@@ -55,11 +55,17 @@ function columnFiller(columnText) {
 function generarNumeroRandom(min, max) {
     return Math.round(Math.random() * (max - min) + min);
 };
+function deleteTable(){
+    const salesTable = document.getElementById("sales-table");
+    salesTable.textContent = "";
+}
 
-// Sales Page + Sales Table 
+// Sales Page 
 
 function renderTable() {
     runObjectSales();
+
+    // Table structure
 
     const salesTable = document.getElementById("sales-table");
     const table = document.createElement("table");
@@ -70,6 +76,8 @@ function renderTable() {
 
     const tbody = document.createElement("tbody");
     table.appendChild(tbody);
+
+    //Headers
 
     const headerRow = document.createElement("tr");
     thead.appendChild(headerRow);
@@ -87,28 +95,32 @@ function renderTable() {
     totalHeader.textContent = "Location Total";
     headerRow.appendChild(totalHeader);
 
+    // add store names + sales + location totals as rows
+
     for (let i = 0; i < stores.length; i++) {
         const row = renderRows(stores[i]);
         tbody.appendChild(row);
     }
 
+    // add last row of hourly totals
+
     const totalRow = renderHourlyTotalRow();
     tbody.appendChild(totalRow);
 }
 function renderRows(store) {
+    let locationTotal = 0;
     const row = document.createElement("tr");
-    let total = 0;
     const nameCell = document.createElement("td");
     nameCell.textContent = store.name;
     row.appendChild(nameCell);
     for (let i = 0; i < hours.length; i++) {
-        const td = document.createElement("td");
-        td.textContent = store.cookiesPerHour[i];
-        row.appendChild(td);
-        total += store.cookiesPerHour[i];
+        const cookieCell = document.createElement("td");
+        cookieCell.textContent = store.cookiesPerHour[i];
+        row.appendChild(cookieCell);
+        locationTotal += store.cookiesPerHour[i];
     }
     const totalCell = document.createElement("td");
-    totalCell.textContent = total;
+    totalCell.textContent = locationTotal;
     row.appendChild(totalCell);
     return row;
 };
@@ -117,7 +129,6 @@ function renderHourlyTotalRow() {
     const nameCell = document.createElement("td");
     nameCell.textContent = "Hourly Total for All Locations";
     row.appendChild(nameCell);
-
     let grandTotal = 0;
     for (let i = 0; i < hours.length; i++) {
         let hourlyTotal = 0;
@@ -136,6 +147,25 @@ function renderHourlyTotalRow() {
 
     return row;
 }
+// event listener for new store form
+
+const newStoreForm = document.getElementById(`newStore`)
+
+newStoreForm.addEventListener(`submit`,
+    function (event){
+        event.preventDefault();
+        const locationName = event.target.locationName.value;
+        const minCustomersPerHour = parseInt(event.target.minCustomersPerHour.value);
+        const maxCustomersPerHour = parseInt(event.target.maxCustomersPerHour.value);
+        const avgCookiesPerSale = parseInt(event.target.avgCookiesPerSale.value);
+
+        const newLocation = new Location(locationName, ``, ``, ``, [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
+        newLocation.estimate(this);
+        stores.push(newLocation);
+        deleteTable();
+        renderTable();
+    }
+);
 
 // Main page
 
@@ -158,4 +188,3 @@ function renderIndex(store){
     addressInfo.textContent= `Location: ${store.address}`;
     location.appendChild(addressInfo);
 };
-
