@@ -4,8 +4,8 @@
 
 - First major commit:
 
-![Lighthouse-1](../cookie-stand/img/LightHouse.png)
+![Lighthouse-1](./img/LightHouse.png)
 
 - Finished Sales page:
 
-![Lighthouse-2](../cookie-stand/img/LightHouse2.png)
+![Lighthouse-2](./img/LightHouse2.png)
