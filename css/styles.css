@@ -49,9 +49,11 @@ ul{
     list-style: none;
 }
 section{
+    padding-top: 30px;
+}
+#sales-table{
     display: flex;
     justify-content: space-around;
-    padding-top: 30px;
 }
 table {
     border-collapse: collapse;
