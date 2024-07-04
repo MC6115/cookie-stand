@@ -164,6 +164,11 @@ newStoreForm.addEventListener(`submit`,
         stores.push(newLocation);
         deleteTable();
         renderTable();
+        // for(let i=0;i<event.target.length;i++){
+        //     if(event.target[i].name){
+                
+        //     }
+        // }
     }
 );
 
