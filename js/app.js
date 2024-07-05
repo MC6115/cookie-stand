@@ -154,21 +154,23 @@ const newStoreForm = document.getElementById(`newStore`)
 newStoreForm.addEventListener(`submit`,
     function (event){
         event.preventDefault();
-        const locationName = event.target.locationName.value;
+        const name = event.target.name.value;
         const minCustomersPerHour = parseInt(event.target.minCustomersPerHour.value);
         const maxCustomersPerHour = parseInt(event.target.maxCustomersPerHour.value);
         const avgCookiesPerSale = parseInt(event.target.avgCookiesPerSale.value);
 
-        const newLocation = new Location(locationName, ``, ``, ``, [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
+        const newLocation = new Location(name, ``, ``, ``, [], minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale)
         newLocation.estimate(this);
         stores.push(newLocation);
         deleteTable();
         renderTable();
         // for(let i=0;i<event.target.length;i++){
-        //     if(event.target[i].name){
-                
+        //     if(event.target[i].name != ""){
+        //          Location[event.target[i].name]=event.target[i]
         //     }
         // }
+        // deleteTable();
+        // renderTable();
     }
 );
 

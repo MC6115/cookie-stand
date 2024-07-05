@@ -1,26 +1,18 @@
 header{
     background-color: black;
     color: salmon; 
-    font-family: Arial, Helvetica, sans-serif;
-}
-main{
-    padding-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-footer{
-    background-color: lightgray;
-    font-family: Arial, Helvetica, sans-serif;
 }
 h1{
-    font-size: xx-large;
+    font-size: xxx-large;
     font-weight:900;
     display: flex;
     justify-content: space-around;
     padding: 40px;
     font-style: italic;
+    font-family: "Righteous", sans-serif;
 }
 nav{
-    font-size: 14px;
+    font-size: 16px;
     background-color: salmon;
     padding: 10px;
 }
@@ -33,12 +25,12 @@ main{
 }
 footer{
     background-color: lightgray;
-    font-family: Arial, Helvetica, sans-serif;
 }
 h2{
     margin: 20px;
-    font-size: large;
+    font-size:xx-large;
     font-weight: bold;
+    font-family: "Righteous", sans-serif;
 }
 main p{
     color: gray;
@@ -55,10 +47,6 @@ footer p{
     padding: 50px;
     display: flex;
     justify-content: space-around;
-}
-main{
-    padding-bottom: 30px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 ul{
     padding-left: 50px;
@@ -135,4 +123,5 @@ button{
 legend{
     font-weight: bold;
     color: red;
+    font-family: "Righteous", sans-serif;
 }
